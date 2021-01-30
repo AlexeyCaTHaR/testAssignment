@@ -24,7 +24,6 @@
         :key="index"
         :comment-text="comment.commentText"
         :inner-comments="comment.innerComments"
-        ref="child"
       ></Comment>
     </div>
   </div>
