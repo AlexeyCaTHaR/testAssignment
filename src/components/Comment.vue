@@ -7,9 +7,11 @@
 
       <div v-if="showInnerComment" class="inner">
         <Comment
+          v-for="(innerComment, index) in innerComments"
+          ref="comments"
+          :key="index"
           :comment-text="innerComment.commentText"
-          :inner-comment="innerComment.innerComment"
-        >
+          :inner-comments="innerComment.innerComments">
         </Comment>
       </div>
     </div>
@@ -23,8 +25,8 @@ export default {
       type: String,
       default: '',
     },
-    innerComment: {
-      type: Object,
+    innerComments: {
+      type: Array,
       default: () => {},
     },
   },
@@ -35,14 +37,17 @@ export default {
   },
   computed: {
     showInnerComment() {
-      return this.innerComment
-        && this.innerComment.commentText
-        && this.innerComment.commentText.length > 0;
+      return this.innerComments && this.innerComments.length > 0;
     },
   },
   methods: {
     deleteComment() {
       this.isDeleted = true;
+      if (this.$refs.comments) {
+        Object.keys(this.$refs.comments).forEach((i) => {
+          this.$refs.comments[i].deleteComment();
+        });
+      }
       console.log('delete comment with text:', this.commentText);
     },
   },

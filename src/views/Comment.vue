@@ -8,7 +8,7 @@
       automatically called in all child components. To illustrate the structure, render
       string-type property in component. Pretty visualisation of the structure is welcome.
     </p>
-    <img src="/images/comment.png" alt="comment">
+    <img src="../assets/comment.png" alt="comment">
     <p>
       If foo was called in component 1, it must automatically be called in 2, 3, 4, 5.
       If the method was called in 2, it must be called only in 3.
@@ -17,16 +17,14 @@
       to console.
     </p>
     <h2>Реализация</h2>
-    <div>
-      <Comment
-        :comment-text="comment.commentText"
-        :innerComment="comment.innerComment"
-      ></Comment>
+
+    <div class="comments">
       <Comment
         v-for="(comment, index) in comments"
         :key="index"
         :comment-text="comment.commentText"
-        :innerComment="comment.innerComment"
+        :inner-comments="comment.innerComments"
+        ref="child"
       ></Comment>
     </div>
   </div>
@@ -38,28 +36,49 @@ export default {
   components: { Comment },
   data() {
     return {
-      comment: {
-        commentText: 'text',
-        innerComment: {},
-      },
       comments: [
         {
           commentText: 'top level text1',
-          innerComment: {
-            commentText: 'second level text',
-            innerComment: {
-              commentText: 'third level text',
-              innerComment: {},
+          innerComments: [
+            {
+              commentText: 'second level text',
+              innerComments: [
+                {
+                  commentText: 'third level text',
+                  innerComments: [],
+                },
+                {
+                  commentText: 'third level text2',
+                  innerComments: [],
+                },
+              ],
             },
-          },
+            {
+              commentText: 'second level text2',
+              innerComments: [],
+            },
+            {
+              commentText: 'second level text3',
+              innerComments: [
+                {
+                  commentText: 'third level text',
+                  innerComments: [],
+                },
+                {
+                  commentText: 'third level text2',
+                  innerComments: [],
+                },
+              ],
+            },
+          ],
         },
         {
           commentText: 'top level text2',
-          innerComment: {},
+          innerComments: [],
         },
         {
           commentText: 'top level text3',
-          innerComment: {},
+          innerComments: [],
         },
       ],
     };
