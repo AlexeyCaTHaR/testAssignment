@@ -5,7 +5,7 @@
       <p v-html="commentText"></p>
       <button @click="deleteComment" class="delete">Удалить комментарий</button>
 
-      <div v-if="showInnerComment" class="inner">
+      <CommentGroup v-if="showInnerComment" class="inner">
         <Comment
           v-for="(innerComment, index) in innerComments"
           ref="comments"
@@ -13,13 +13,16 @@
           :comment-text="innerComment.commentText"
           :inner-comments="innerComment.innerComments">
         </Comment>
-      </div>
+      </CommentGroup>
     </div>
 </template>
 
 <script>
+import CommentGroup from '@/components/CommentGroup.vue';
+
 export default {
   name: 'Comment',
+  components: { CommentGroup },
   props: {
     commentText: {
       type: String,
