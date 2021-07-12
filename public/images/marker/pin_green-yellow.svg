@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="44px" viewBox="0 0 30 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>map marker copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="images-/-maps-/-msk" transform="translate(-914.000000, -991.000000)">
+            <g id="icons-/-map-marker-/-streetbeat-copy" transform="translate(914.000000, 991.000000)">
+                <path d="M15,0 L15,44 C9.441,35.488 0,23.398 0,14.683 C0,7.529 6.072,0 15,0 L15,0 Z" id="Combined-Shape" fill="#003B45"></path>
+                <path d="M15,0 C23.929,0 30,7.529 30,14.683 C30,23.398 20.559,35.487 15,44 L15,44 Z" id="Combined-Shape" fill="#FFCF34"></path>
+                <path d="M22,18.1362 C22,21.8832 18.235,23.0002 14.936,23.0002 C11.259,23.0002 8.02,21.3592 8,17.7702 L13.716,17.7702 C13.716,18.4582 14.368,18.6412 15.021,18.6412 C15.649,18.6412 16.198,18.4802 16.198,17.9532 C16.198,17.4882 15.84,17.2632 14.79,17.1632 C11.573,16.9002 8.084,16.3722 8.084,12.6032 C8.084,9.7042 11.301,8.0002 14.936,8.0002 C18.742,8.0002 21.683,9.5602 21.77,12.8242 L16.198,12.8242 C16.174,12.3772 15.61,12.1572 15.04,12.1572 C14.537,12.1572 13.885,12.3592 13.885,12.9492 C13.885,13.4332 14.285,13.6582 14.79,13.6962 C17.88,13.9392 22,14.2852 22,18.1362" id="Fill-3" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

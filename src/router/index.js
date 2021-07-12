@@ -15,6 +15,11 @@ const routes = [
     name: 'Comment',
     component: () => import('../views/Comment.vue'),
   },
+  {
+    path: '/map',
+    name: 'Map',
+    component: () => import('../views/Map.vue'),
+  },
 ];
 
 const router = new VueRouter({
