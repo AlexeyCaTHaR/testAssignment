@@ -169,6 +169,10 @@ export default {
       }
     },
     clearMap() {
+      if (this.clusterer) {
+        this.clusterer.removeAll();
+        this.clusterer = null;
+      }
       this.myMap.geoObjects.removeAll();
     },
     centerMap() {
