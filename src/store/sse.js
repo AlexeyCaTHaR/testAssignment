@@ -30,7 +30,9 @@ export default {
   mutations: {
     addMessage(state, message) {
       state.messages.push({
-        ...message,
+        id: message.id,
+        type: message.type,
+        message: message.message,
         hidden: false,
       });
     },

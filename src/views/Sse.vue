@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       eventSource: null,
-      eventSourceUrl: '',
+      eventSourceUrl: 'http://localhost/sse',
       sseEnabled: false,
     };
   },
@@ -75,7 +75,7 @@ export default {
     },
     connected() {
       this.addMessage({
-        type: 'log',
+        type: 'open',
         message: 'Connection was opened',
       });
     },
@@ -86,7 +86,7 @@ export default {
     error(event) {
       this.addMessage({
         type: 'error',
-        message: `Error was ocured: ${JSON.stringify(event)}`,
+        message: `Error has occurred: ${JSON.stringify(event)}`,
       });
     },
     joinEvent(event) {
@@ -103,6 +103,9 @@ export default {
     sseEnabled() {
       if (this.sseEnabled) {
         this.listenSource();
+      } else {
+        this.eventSource.close();
+        this.eventSource = null;
       }
     },
   },

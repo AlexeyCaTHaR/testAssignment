@@ -42,7 +42,11 @@ export default {
     font-weight: bold;
   }
   &.error {
-    background-color: red;
+    background-color: #fa9090;
+    font-weight: bold;
+  }
+  &.open {
+    background-color: #dcb968;
     font-weight: bold;
   }
 
